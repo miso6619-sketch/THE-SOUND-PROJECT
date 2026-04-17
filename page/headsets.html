@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headsets</title>
+
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/headsets.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="menu-area"></div>
+
+      <section id="headsets-visual">
+        <div class="inner">
+          <div class="headsets-info">
+            <h2 id="itemName">TSP Signature Gold</h2>
+            <p class="item-desc" id="itemDesc">
+              프리미엄 사운드와 세련된 디자인
+            </p>
+            <strong class="item-price" id="itemPrice">₩329,000</strong>
+          </div>
+
+          <div class="swiper headsetSwiper">
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide"
+                data-name="TSP Midnight Flow"
+                data-desc="깊고 유연한 저음과 부드러운 몰입감"
+                data-price="₩329,000"
+              >
+                <img src="../img/headset01.png" alt="TSP Midnight Flow" />
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-name="TSP Cloud Silver"
+                data-desc="맑고 정돈된 사운드에 가벼운 착용감"
+                data-price="₩299,000"
+              >
+                <img src="../img/headset02.png" alt="TSP Cloud Silver" />
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-name="TSP Pure Sonic"
+                data-desc="선명한 디테일과 균형 잡힌 울림"
+                data-price="₩339,000"
+              >
+                <img src="../img/headset03.png" alt="TSP Pure Sonic" />
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-name="TSP Classic Brown"
+                data-desc="따뜻한 톤과 빈티지 감성의 사운드"
+                data-price="₩359,000"
+              >
+                <img src="../img/headset04.png" alt="TSP Classic Brown" />
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-name="TSP Soft Cream"
+                data-desc="부드러운 착용감과 편안한 청음 밸런스"
+                data-price="₩279,000"
+              >
+                <img src="../img/headset05.png" alt="TSP Soft Cream" />
+              </div>
+              <div
+                class="swiper-slide"
+                data-name="TSP Signature Gold"
+                data-desc="우아한 디자인과 풍부한 프리미엄 음색"
+                data-price="₩459,000"
+              >
+                <img src="../img/hotthing01.png" alt="TSP Signature Gold" />
+              </div>
+
+              <div
+                class="swiper-slide"
+                data-name="TSP Deep Black"
+                data-desc="강력한 몰입감과 묵직한 베이스 퍼포먼스"
+                data-price="₩399,000"
+              >
+              
+                <img src="../img/hotthing02.png" alt="TSP Deep Black" />
+                </div>
+                <div
+                  class="swiper-slide"
+                  data-name="TSP Bronze Black"
+                  data-desc="묵직한 존재감과 세련된 프리미엄 사운드"
+                  data-price="₩389,000"
+                >
+                  <img src="../img/headset06.png" alt="TSP Bronze Black" />
+                </div>
+
+                <div
+                  class="swiper-slide"
+                  data-name="TSP Copper Wave"
+                  data-desc="강렬한 저음과 입체적인 공간감"
+                  data-price="₩419,000"
+                >
+                  <img src="../img/headset07.png" alt="TSP Copper Wave" />
+                </div>
+
+                <div
+                  class="swiper-slide"
+                  data-name="TSP Sand Beige"
+                  data-desc="차분한 감성과 깨끗한 고해상도 사운드"
+                  data-price="₩349,000"
+                >
+                  <img src="../img/headset08.png" alt="TSP Sand Beige" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="footer-area"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/ngo.js"></script>
+
+    <script>
+      $("#menu-area").load("menu.html", function () {
+        console.log("menu.html 로드 완료");
+        initMenu();
+      });
+
+      $("#footer-area").load("footer.html");
+    </script>
+
+    <script src="../js/headset.js"></script>
+  </body>
+</html>

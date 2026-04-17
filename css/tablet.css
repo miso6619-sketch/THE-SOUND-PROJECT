@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/* common */
+*,
+*::before,
+*::after {box-sizing: border-box;}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+section+section {
+    padding: 60px 0 30px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+/* ================================= header ========================== */
+header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 50;
+    background: rgba(0,0,0,0.85);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 0;
+}
+header .inner {
+    width: 100%;
+    padding-inline: 12px; /* 패딩 좌우만 */
+}
+header .btn-close {
+    display: block;
+    position: absolute;
+    top: 70px; right: 20px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 10px;
+    z-index: 100;
+} 
+
+/* top-header */
+header .top-header {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: visible; /* visible로 값이 설정되어야 nav가 화면에 보여짐 */
+}
+/* logo */
+header .logo, 
+header .sns {
+    display: none;
+}
+
+header .mobile-nav {
+    display: block;
+    position: relative;
+    height: 70px;
+} 
+header .mobile-nav .btn-mobile {
+    position: absolute;
+    top: 50%; left: 12px;
+    transform: translateY(-50%);    
+    width: 44px; height: 44px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .mobile-nav .btn-mobile i {
+    font-size: 26px;
+    color: #fff;
+}
+header .btn-donate {
+    position: absolute;
+    padding-inline: 20px;
+    top: 12px; right: 0;
+}
+header .m-logo {
+    display: block;
+    height: 70px;
+    background: url(../img/logo-mobile.png) no-repeat center/140px auto;
+}
+
+/* 모바일에서 활성화 */
+header .btn-close {
+    display: block;
+    position: absolute;
+    top: 20px; right: 20px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.8);
+    padding: 5px;
+}
+header .btn-close i {
+    font-size: 26px;
+    color: #fff;
+}
+
+/* top-header */
+header .top-header {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: visible; /* visible로 값이 설정되어야 nav가 보임 */
+}
+
+/* logo */
+header .logo,
+header .sns {
+    display: none;
+}
+
+/* gnb */
+header .gnb-area {
+    position: fixed;
+    inset: 0;/* top 0/ left 0/ right 0/ bottom 0 */
+    width: 100%;   
+    height: 100vh;
+    background: rgba(0,0,0,.75);
+    display: none;
+}
+
+.gnb-area .gnb {
+    width:60%;
+    margin: 10vh auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    /*  max-content: 영역안에 들어간 텍스트의 한줄로 차지가능한 최대크기/글자 크기만큼 영역*/
+    column-gap: 0;
+}
+.gnb li a {
+    text-align: center;
+}
+.gnb li + li {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+
+
+
+/* ================================= main-visual ========================== */
+#main-visual {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-visual .main-mov {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+#main-visual .main-mov::before {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.1) 70%) no-repeat;
+    background-blend-mode: overlay;
+    z-index: 1;
+    content: '';
+}
+#main-visual .main-mov video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* video는 브라우저에서 기본 크기 설정이 contain으로 되어있어서 video의 높이 기준으로 정렬됨. 따라서 cover로 재선언 해줘야함. */
+}
+#main-visual .main-title {
+    text-align: center;
+}
+.main-title strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 3.5vw, 48px);
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+.main-title .sub-title {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.btn-area .btn {
+    position: relative;
+    color: #fff;
+    background: #2d7645;
+    border-radius: 10px;       
+}
+.btn-area .btn::before {
+    position: absolute;
+    top: 0; left: 0; 
+    width: 0;
+    height: 100%;
+    background: #3e2f26;
+    transition: 0.25s; 
+    content: '';
+}
+.btn-area .btn:hover::before  {
+    width: 100%;
+}
+.btn-area span {
+    position: relative;
+}
+
+main {
+    background: #efefef;
+}

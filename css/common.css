@@ -1,0 +1,150 @@
+@charset "utf-8";
+@import url(font.css);
+
+html, body, head, h1, h2, h3, h4, h5, h6, div, p, ul, ol, li, dl, dt, dd, table, caption, thead, tr, td, tbody, tfoot, header nav section, article, figure, figcaption, footer, aside, form, legend, fieldset, address {margin: 0; padding: 0;} 
+
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+em, address {font-style: normal;} /* 기울임체를 일반스타일로 변환 */
+table {border-collapse: collapse;} /* 셀간의 간격을 없애는 속성 */
+button {
+    border: 0;
+}
+h1, h2, h3, h4, strong, p{
+    font-weight: 500;
+}
+button, input, select, textarea{
+    font: inherit;
+}
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.85);
+}
+/* 폰트를 가려준 블라인드 텍스트 */
+.blind {
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+
+:root {
+  --color-primary: #c68b59;
+  --color-primary-hover: #b37746;
+  --color-secondary: #d8c7b4;
+
+  --color-bg: #111111;
+  --color-bg-soft: #1a1a1a;
+  --color-surface: #222222;
+  --color-surface-light: #2c2c2c;
+
+  --color-text: #f5f1eb;
+  --color-text-muted: #b7aea4;
+  --color-text-dark: #141414;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-overlay: rgba(0, 0, 0, 0.42);
+
+  --color-accent: #e7d7c5;
+  --color-highlight: #8f6a4f;
+
+  --gnb-text: #f5f1eb;
+  --gnb-text-hover: #c68b59;
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* common */
+.inner {
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: "Yeseva One", serif;
+  font-size: clamp(22px, 3.5vw, 44px);
+  margin-bottom: 60px;
+  color: var(--color-text);
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--color-text);
+}
+
+section + section {
+  padding: 120px 0 60px;
+}
+
+.text {
+  line-height: 1.7;
+  letter-spacing: -0.4px;
+  word-break: keep-all;
+  color: var(--color-text-muted);
+}
+
+.btn {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 15px 60px;
+  cursor: pointer;
+  transition: 0.25s;
+  border: 0;
+}

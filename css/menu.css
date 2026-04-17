@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* ================================= header ========================== */
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+  padding: 24px 0;
+}
+
+#header .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#header .menu-top-header {
+  position: relative;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 로고 */
+#header .menu-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  margin: 0;
+}
+
+#header .menu-logo > a {
+  display: block;
+  width: 190px;
+  height: 70px;
+  background: url(../img/logo_1.png) no-repeat center / contain;
+}
+
+/* 왼쪽 메뉴 버튼 */
+#header .menu-btn-mobile {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 30;
+  padding: 8px 0;
+}
+
+#header .menu-btn-mobile i {
+  font-size: 26px;
+  color: var(--color-text);
+}
+
+/* 우측 링크 */
+#header .menu-header-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 30;
+}
+
+#header .menu-header-right a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  transition: 0.25s;
+}
+
+#header .menu-header-right a:hover {
+  color: var(--color-primary);
+}
+
+/* 메뉴 처음엔 숨김 */
+#header .menu-gnb-area {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+#header .menu-gnb-area.active {
+  display: block;
+}
+
+/* 어두운 오버레이 */
+#header .menu-gnb-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* 왼쪽 메뉴 패널 */
+#header .menu-gnb-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 360px;
+  height: 100vh;
+  padding: 34px 34px 26px;
+  background: rgba(245, 241, 235, 0.98);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+/* 닫기 버튼 */
+#header .menu-gnb-top {
+  margin-bottom: 30px;
+}
+
+#header .menu-btn-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-dark);
+  cursor: pointer;
+  padding: 0;
+}
+
+#header .menu-btn-close i {
+  font-size: 26px;
+}
+
+/* 세로 메뉴 */
+#header .menu-gnb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+#header .menu-gnb li {
+  width: 100%;
+}
+
+#header .menu-gnb li a {
+  display: block;
+  width: 100%;
+  padding: 6px 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+  transition: 0.25s;
+}
+
+#header .menu-gnb li a:hover {
+  color: var(--color-primary);
+  padding-left: 8px;
+}
+
+/* 패널 하단 sns */
+#header .menu-gnb-bottom {
+  padding-top: 40px;
+  padding-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+#header .menu-gnb-sns {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+#header .menu-gnb-sns a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface-light);
+  color: var(--color-text);
+  font-size: 16px;
+  transition: 0.25s;
+}
+
+#header .menu-gnb-sns a:hover {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+/* 기존 요소 숨김 */
+#header .sns,
+#header .btn-donate,
+.mobile-nav {
+  display: none;
+}

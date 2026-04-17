@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+
+#menu-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+}
+
+#header {
+  background: #111;
+  min-height: 100px;
+}
+
+#header .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#headsets-visual {
+  padding: 230px 0 90px;
+  background: var(--color-text);
+  overflow: hidden;
+}
+
+#headsets-visual .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#headsets-visual .headsets-info {
+  max-width: 340px;
+  margin: 0 auto 54px;
+  text-align: center;
+  color: var(--color-text-dark);
+}
+
+#headsets-visual .headsets-info h2 {
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+#headsets-visual .item-desc {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+#headsets-visual .item-price {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+#headsets-visual .headsetSwiper {
+  overflow: visible;
+}
+
+#headsets-visual .swiper-wrapper {
+  align-items: flex-end;
+}
+
+#headsets-visual .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0.28;
+  transform: scale(0.56);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  cursor: pointer;
+}
+
+#headsets-visual .swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 165px;
+  height: auto;
+  object-fit: contain;
+}
+
+#headsets-visual .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#headsets-visual .swiper-slide-active img {
+  max-width: 250px;
+}
+
+#headsets-visual .swiper-slide-prev,
+#headsets-visual .swiper-slide-next {
+  opacity: 0.58;
+  transform: scale(0.72);
+}

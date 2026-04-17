@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Brand</title>
+
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/menu.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/aboutBrand.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="menu-area"></div>
+
+      <main id="about-page">
+        <section class="about-hero">
+          <div class="about-inner">
+            <div class="about-hero-media">
+              <img src="../img/about-visual01.png" alt="브랜드 무드 이미지" />
+            </div>
+
+            <div class="about-hero-bottom">
+              <div class="about-hero-title-wrap">
+                <h2 class="about-hero-title">THE SOUND PROJECT</h2>
+              </div>
+
+              <div class="about-hero-text-wrap">
+                <p class="about-hero-label">BRAND STORY</p>
+                <p class="about-hero-desc">
+                  정제된 디자인과 깊이 있는 사운드로 일상의 순간을 더욱 선명하게
+                  완성합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="about-concept">
+          <div class="about-inner">
+            <div class="about-concept-grid">
+              <div class="about-concept-left">
+                <p class="about-concept-kicker">
+                  PORTFOLIO OF DESIGN | THE SOUND PROJECT
+                </p>
+
+                <div class="about-concept-heading">
+                  <span class="about-concept-sub">ABOUT BRAND</span>
+                  <h2 class="about-concept-title">CONCEPTS</h2>
+                  <p class="about-concept-small">Premium Audio Identity</p>
+                </div>
+
+                <div class="about-concept-text">
+                  <p>
+                    THE SOUND PROJECT는 단순히 제품을 만드는 브랜드가 아니라
+                    공간과 감각, 그리고 일상의 분위기를 함께 설계하는 오디오
+                    브랜드를 지향합니다.
+                  </p>
+                  <p>
+                    절제된 형태와 균형 잡힌 사운드를 바탕으로 오래 두고
+                    사용할수록 더 깊이 느껴지는 경험을 제안합니다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about-concept-right">
+                <div class="about-concept-main-image">
+                  <img
+                    src="../img/about-visual02.png"
+                    alt="브랜드 컨셉 이미지"
+                  />
+                </div>
+
+                <div class="about-concept-bottom">
+                  <div class="about-concept-thumb">
+                    <img
+                      src="../img/about-visual03.png"
+                      alt="브랜드 디테일 이미지"
+                    />
+                  </div>
+
+                  <div class="about-concept-note">
+                    <p class="about-concept-note-title">BRAND MESSAGE</p>
+                    <p class="about-concept-note-text">
+                      절제된 디자인과 깊이 있는 사운드로 <br />
+                      브랜드만의 프리미엄 무드를 완성합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div id="footer-area"></div>
+    </div>
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/ngo.js"></script>
+
+    <script>
+      $("#menu-area").load("menu.html", function () {
+        initMenu();
+      });
+
+      $("#footer-area").load("footer.html");
+    </script>
+  </body>
+</html>

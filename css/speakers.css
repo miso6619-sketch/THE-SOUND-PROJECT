@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+#menu-area {
+  position: relative;
+  z-index: 1000;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #111;
+  height: 120px;
+}
+
+#header .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#header .menu-top-header {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 페이지 공통 */
+#sp-page {
+  background: var(--color-text);
+}
+
+.sp-sec {
+  background: var(--color-text);
+  overflow: hidden;
+}
+
+#sp-speaker {
+  padding: 190px 0 90px;
+}
+
+#sp-soundbar {
+  padding: 110px 0 90px;
+}
+
+.sp-sec .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 헤더 텍스트 영역 */
+.sp-head {
+  max-width: 340px;
+  margin: 0 auto 54px;
+  text-align: center;
+  color: var(--color-text-dark);
+  position: relative;
+  z-index: 2;
+}
+
+#sp-soundbar .sp-head {
+  margin: 0 auto;
+}
+
+.sp-title {
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-text-dark);
+}
+
+.sp-desc {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+.sp-price {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+}
+
+.sp-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border: 1px solid rgba(20, 20, 20, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+/* 공통 swiper */
+.sp-swiper {
+  overflow: visible;
+  position: relative;
+}
+
+.sp-swiper .swiper-wrapper {
+  align-items: flex-end;
+}
+
+.sp-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  opacity: 0.28;
+  transform: scale(0.56);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  cursor: pointer;
+}
+
+.sp-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.sp-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sp-swiper .swiper-slide-active img {
+  max-width: 200px;
+}
+
+.sp-swiper .swiper-slide-prev,
+.sp-swiper .swiper-slide-next {
+  opacity: 0.58;
+  transform: scale(0.72);
+}
+
+/* =========================
+   speaker 영역 헤드셋 느낌으로 보정
+========================= */
+
+/* 텍스트는 inner 기준으로 유지 */
+#sp-speaker .sp-head,
+#sp-soundbar .sp-head {
+  position: relative;
+  z-index: 3;
+}
+
+/* swiper만 inner 폭 제한에서 시각적으로 풀어주기 */
+#sp-speaker .sp-swiper,
+#sp-soundbar .sp-swiper {
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 슬라이드 간격이 너무 모여 보이지 않게 */
+#sp-speaker .sp-slide,
+#sp-soundbar .sp-slide {
+  width: 240px;
+}
+
+/* speaker 이미지가 좀 더 시원하게 보이도록 */
+#sp-speaker .sp-slide img {
+  max-width: 190px;
+}
+
+#sp-speaker .swiper-slide-active img {
+  max-width: 300px;
+}
+
+/* soundbar는 가로형이라 별도 폭 */
+#sp-soundbar .sp-slide {
+  width: 340px;
+}
+
+#sp-soundbar .sp-slide img {
+  max-width: 280px;
+}
+
+#sp-soundbar .swiper-slide-active img {
+  max-width: 420px;
+}
+
+/* 양옆 흐린 이미지가 조금 더 보이게 */
+#sp-speaker .swiper-slide-prev,
+#sp-speaker .swiper-slide-next,
+#sp-soundbar .swiper-slide-prev,
+#sp-soundbar .swiper-slide-next {
+  opacity: 0.5;
+  transform: scale(0.74);
+}
+
+/* 너무 끝으로 잘리지 않게 섹션 자체는 hidden 유지 */
+#sp-speaker,
+#sp-soundbar {
+  overflow: hidden;
+}

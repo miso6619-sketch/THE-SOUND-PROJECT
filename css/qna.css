@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+#menu-area {
+  position: relative;
+  z-index: 1000;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--color-bg);
+  height: 120px;
+}
+
+#header .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+#header .menu-top-header {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* page */
+#qna-page {
+  background: var(--color-text);
+  color: var(--color-text-dark);
+}
+
+/* common */
+.qna-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* hero */
+#qna-page {
+  padding-top: 120px;
+  background: var(--color-text);
+}
+
+.qna-hero-text {
+  max-width: 620px;
+  margin: 46px 0;
+}
+
+.qna-hero-kicker {
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-highlight);
+}
+
+.qna-hero-title {
+  margin-bottom: 18px;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--color-text-dark);
+}
+
+.qna-hero-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+/* faq */
+.qna-faq {
+  padding: 10px 0 140px;
+  background: var(--color-text);
+}
+
+.qna-accordion {
+  border-top: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.qna-item {
+  border-bottom: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.qna-question {
+  width: 100%;
+  padding: 28px 0;
+  border: 0;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.qna-question-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-text-dark);
+}
+
+.qna-question-icon {
+  flex-shrink: 0;
+  width: 32px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--color-primary);
+  transition: transform 0.3s ease;
+}
+
+.qna-item.active .qna-question-icon {
+  transform: rotate(180deg);
+}
+
+.qna-answer {
+  display: none;
+  padding: 0 0 28px;
+}
+
+.qna-answer p {
+  max-width: 920px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+/* hover */
+.qna-item:hover .qna-question-text {
+  color: var(--color-primary);
+}
