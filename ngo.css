@@ -1,0 +1,610 @@
+@charset "utf-8";
+
+/* common */
+.inner {
+    position: relative;
+    width: min(1400px, 94%);
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: "Yeseva One", serif;
+    font-size: clamp(22px, 3.5vw, 44px);
+    /* vw는 %로 계산 */
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: clamp(18px, 2.5vw, 22px);
+    margin-bottom: 15px;
+}
+
+section+section {
+    padding: 120px 0 60px;
+}
+
+.text {
+    line-height: 1.5;
+    letter-spacing: -1px;
+    word-break: keep-all;
+    /* 개행시 단어분절되지 않도록 함 */
+}
+
+.btn {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 15px 60px;
+    cursor: pointer;
+}
+
+/* ================================= header ========================== */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-block: 20px;
+}
+/* 모바일에서 활성화 */
+header .btn-close {display: none;}
+
+/* top-header */
+header .top-header {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* logo */
+header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .logo>a {
+    display: block;
+    width: 160px;
+    height: 70px;
+    background: url(img/logo_1.png) no-repeat center / contain;
+}
+
+/* gnb */
+header .gnb-area {
+    width: 100%;
+}
+
+.gnb-area .gnb {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, max-content) 150px repeat(3, max-content);
+    /*  max-content: 영역안에 들어간 텍스트의 한줄로 차지가능한 최대크기/글자 크기만큼 영역*/
+    align-items: center;
+    justify-content: center; /* 전체 요소를 가운데로 정렬 */
+    column-gap: 40px;
+}
+.gnb li {
+  white-space: nowrap;
+}
+.gnb li a {
+    padding: 25px 16px;
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+.gnb li a:hover {
+    color: #ffcc00;
+}
+.mobile-nav {display: none;} /* 모바일 버튼 */
+
+/* sns */
+header .sns {
+    position: absolute;
+    top: 25px; left: 0;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+header .sns > a {
+    padding: 5px;
+    color: rgba(255,255,255,0.7);
+    font-size: 22px;
+}
+header .btn-donate {
+    position: absolute;
+    top: 25px; right: 0;
+    padding: 10px 25px;
+    background: #ff6a00;
+    color: #fff;
+    font-weight: 500;
+    z-index: 4;
+    transition: all 0.25s;
+}
+header .btn-donate:hover {
+    transform: scale(1.05);
+}
+
+/* ================================= main-visual ========================== */
+#main-visual {
+    position: relative;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-visual .main-mov {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+#main-visual .main-mov::before {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0.1) 70%) no-repeat;
+    background-blend-mode: overlay;
+    z-index: 1;
+    content: '';
+}
+#main-visual .main-mov video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* video는 브라우저에서 기본 크기 설정이 contain으로 되어있어서 video의 높이 기준으로 정렬됨. 따라서 cover로 재선언 해줘야함. */
+}
+#main-visual .main-title {
+    text-align: center;
+}
+.main-title strong {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(22px, 3.5vw, 48px);
+    font-weight: 700;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+.main-title .sub-title {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.btn-area .btn {
+    position: relative;
+    color: #fff;
+    background: #2d7645;
+    border-radius: 10px;       
+}
+.btn-area .btn::before {
+    position: absolute;
+    top: 0; left: 0; 
+    width: 0;
+    height: 100%;
+    background: #3e2f26;
+    transition: 0.25s; 
+    content: '';
+}
+.btn-area .btn:hover::before  {
+    width: 100%;
+}
+.btn-area span {
+    position: relative;
+}
+
+main {
+    background: #efefef;
+}
+/* ==================== project-info ========================== */
+#sec-info {
+    background: #e5dad1;
+}
+.info-list {
+    position: relative;
+    top: -150px;
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    width: 1080px;
+    margin: 0 auto;
+    /* margin: -150px auto 0; */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.info-list li {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding: 25px;
+    height: 250px;
+}
+.info-list li img {
+    width: 50px;
+}
+.info-list li + li {
+    border-left: 1px solid #ddd;
+}
+.info-list li:nth-child(4) {
+    border-left: 0;
+}
+.info-list li:nth-child(1),
+.info-list li:nth-child(2),
+.info-list li:nth-child(3) {
+    border-bottom: 1px solid #ddd;
+}
+.info-list .btn {
+    position: relative;
+    border: 1px solid transparent;
+    transition: all 0.25s;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.info-list .btn::before {
+    position: absolute;
+    top: 16px; right: 25px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    content: '\f105';
+    transition: all 0.3s;
+}
+.info-list .btn:hover {
+    border-color: #2d7645;
+}
+.info-list .btn:hover::before {
+    right: 15px;
+    color: #2d7645;
+}
+
+/* sec-features */
+#sec-features {
+    height: 90vh;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sec-features h2 {
+    font-family: inherit; /* 부모의 값을 상속 */
+    text-align: center;
+}
+#sec-features .sub-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1.5;
+}
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.feature-list figure {
+    overflow: hidden;
+    position: relative;
+    height: 240px;
+    background: no-repeat center/cover;
+    margin-bottom: 25px;
+}
+.feature-list .feature01 figure {
+    background-image: url(../34th_NGO/img/img-feauture01.jpg);
+}
+.feature-list .feature02 figure  {
+    background-image: url(../34th_NGO/img/img-feature02.jpg);
+}
+.feature-list .feature03 figure {
+    background-image: url(../34th_NGO/img/img-feautre03.jpg);
+}
+
+.feature-list li figure span {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);    
+    padding: 10px 30px;
+    border: 1px solid #ffcc00;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    color: #ffcc00;
+    opacity: 0;
+    transition: all 0.25s 0.2s; /* transition속성/실행시간/지연시간 */
+}
+.feature-list figure::before {
+    position: absolute;
+    bottom: -100%; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.3s;
+    content: '';
+}
+.feature-list figure:hover::before {
+    bottom: 0;
+}
+.feature-list figure:hover span {
+    opacity: 1;
+}
+
+/* sec-safety */
+#sec-safety {
+    padding: 100px 0;
+    height: 60vh;
+    background: #ecd0a8 url(../34th_NGO/img/img-life01.jpg) no-repeat left center/50% 100%;
+}
+#sec-safety .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.safe-box {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    place-items: center; */
+}
+.safety-info {
+    width: 65%;
+}
+
+.safety-info h2 {
+    font-family: inherit;
+    text-align: center;
+}
+.safety-info dl {
+    margin-bottom: 40px;
+}
+.safety-info dl div + div {
+    margin-top: 50px;
+}
+.safety-info dl dt {
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2d7645;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.safety-info dl dt::before {
+    width: 4px; height: 18px;
+    background: #2d7645;
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    content: '';
+}
+.safety-info .btn-area .btn.btn02 {
+    background: #113a1f;
+}
+
+
+/* 파트너쉽 */
+#sec-partner h2 {
+    font-family: inherit;
+    text-align: center;
+}
+#sec-partner .sub-title {
+    margin: 0 auto 70px;
+    max-width: clamp(320px, 50vw, 640px);
+    text-align: center;
+}
+
+#sec-partner .sub-title .text {
+    color: #2d7645;
+    margin-bottom: 10px;
+}
+.partner-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.partner-list figure {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+.partner-list figure img {
+    position: absolute;
+    max-width: 100%;
+    height: 100%;
+    transition: all 0.25s;
+}
+.partner-list .text-area {
+    position: relative;
+    top: -30px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 30px 30px 5px 5px;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.35s;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.partner-list .text-area h3 {
+    text-align: center;
+    letter-spacing: -1px;
+    font-size: 20px;
+}
+.partner-list .text-area .text {
+    margin-bottom: 40px;
+    text-align: left;
+}
+.partner-list .text-area span {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #2d7645;
+    color: #2d7645;
+    transition: all 0.25s ease;
+}
+.partner-list li:hover img {
+    transform: translateY(-15px);
+}
+.partner-list li:hover .text-area {
+    top: -40px
+}
+.partner-list li:hover span {
+    background: #2d7645;
+    color: #fff;
+    border-color: #fff;
+}
+
+
+/* wanted */
+#sec-wanted {
+    height: 35vh;
+    padding: 0;
+}
+#sec-wanted .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#sec-wanted .inner::before {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    /* background: linear-gradient(to bottom, rgba(12, 28, 123, 0.4), rgba(37, 193, 190, 0.3)) no-repeat center/cover; */
+    content: '';
+}
+#sec-wanted .inner video {
+    width: 100%;
+    object-fit: cover;
+}
+#sec-wanted .text-area {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+#sec-wanted .text-area h2{
+    font-family: inherit;
+    color: #fff;
+    margin-bottom: 25px;
+}
+#sec-wanted .text-area .text {
+    line-height: 1.6;
+    font-size: 22px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 40px;
+}
+#sec-wanted .text-area .btn {
+    font-size: 18px;
+    border: 1px solid #fff;
+    color: #fff
+}
+#sec-wanted .text-area a:hover {
+    background: #d1c6bd;
+}
+
+
+
+
+
+/* 스토리 */
+#sec-story {
+    padding: 120px 0
+}
+#sec-story h2 {
+    font-family: inherit;
+    text-align: center;
+    color: #000
+}
+#sec-story .story-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+.story-list .top {
+    height: 450px;
+    grid-column: span 2;
+    background: #fff;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.story-list figure {
+    height: 100%;
+    background:  url(../34th_NGO/img/GHR1.jpg) no-repeat left top/cover;
+}
+.story-list .story-text {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background-color 0.25s ease;
+}
+.story-list .story-text h3 {
+    font-size: clamp(20px, 2.6vw, 24px);
+    margin-bottom: 20px;
+}
+.story-list .story-text .text + .text {
+    margin-top: 15px;
+}
+.story-list .btn-area {
+    margin-top: 40px;
+}
+.story-list .bottom {
+    background: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+    height: 250px;    
+}
+.story-list .bottom .story02 {
+    background-image: url(../34th_NGO/img/Malawi_day1_143.jpg);
+}
+.story-list .bottom .story03 {
+    background-image: url(../34th_NGO/img/World_Vision_1000_Girls-399.jpg);
+}
+.story-list .bottom .story-text {
+    padding: 25px;
+}
+.story-list li:hover .story-text {
+    background: rgba(62, 47, 38, 0.7);
+    color: #fff
+}
+.story-list .btn-area .btn {
+    background: transparent;
+    border: 1px solid #2d7645;
+    color: #2d7645
+}
+.story-list li:hover .btn {
+    border-color: #fff;
+    color: #fff;
+}
+.story-list .btn-area .btn::before {
+    display: none;
+}
+
+/* footer */
+footer {
+    padding: 30px 0;
+    background: rgba(0,0,0,0.5);
+}
+footer .inner {
+    text-align: center;
+    font-size: 15px;
+    color: rgba(255,255,255,0.5);
+}
