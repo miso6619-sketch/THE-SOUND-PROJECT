@@ -1,185 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THE SOUND PROJECT</title>
-    <link rel="icon" href="img/favicon.jfif" type="image/png">
+    <link rel="icon" href="img/favicon.jfif" type="image/png" />
 
-    <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/home.css" />
 
-    
     <script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/ngo.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/ngo.js"></script>
 
-<script>
-    $("#menu-area").load("page/menu.html", function () {
+    <script>
+      $("#menu-area").load("page/menu.html", function () {
         initMenu();
-    });
+      });
 
-    $("#footer-area").load("page/footer.shtml");
-</script>
-</head>
+      $("#footer-area").load("page/footer.shtml");
+    </script>
+  </head>
 
-<body>
+  <body>
     <div id="wrap">
+      <div id="menu-area"></div>
 
-        <div id="menu-area"></div>
+      <section id="main-visual">
+        <div class="main-mov">
+          <video muted autoplay loop playsinline>
+            <source src="img/bg_video.mp4" type="video/mp4" />
+          </video>
+        </div>
 
-        <section id="main-visual">
-            <div class="main-mov">
-                <video muted autoplay loop playsinline>
-                    <source src="img/bg_video.mp4" type="video/mp4">
-                </video>
-            </div>
+        <div class="main-title">
+          <span class="main-label">Premium Audio</span>
+          <strong>Hear the Difference</strong>
+          <p class="sub-title">
+            듣는 순간, 차이를 알다<br />
+            헤드셋부터 사운드바, 스피커까지 깊고 선명한 사운드를 만나보세요.
+          </p>
+        </div>
+      </section>
 
-            <div class="main-title">
-                <span class="main-label">Premium Audio</span>
-                <strong>Hear the Difference</strong>
-                <p class="sub-title">
-                    듣는 순간, 차이를 알다<br>
-                    헤드셋부터 사운드바, 스피커까지 깊고 선명한 사운드를 만나보세요.
-                </p>
-            </div>
-        </section>
-
-        <section id="sec-info">
-            <div class="inner">
-                <h2 class="blind">New items</h2>
-                <ul class="info-list">
-                    <li>
-                        <a href="page/headsets.html" class="item-link">
-                            <img src="img/hotthing01.png" alt="">
-                            <div class="info-text">
-                                <h3>TSP Signature Gold</h3>
-                                <p class="text">
-                                    프리미엄 사운드와 세련된 <br> 디자인, 몰입의 기준을 바꾸다
-                                </p>
-                            </div>
-                            <span class="btn">헤드셋 쇼핑하기</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="page/headsets.html" class="item-link">
-                            <img src="img/hotthing02.png" alt="">
-                            <div class="info-text">
-                                <h3>TSP Signature Black</h3>
-                                <p class="text">
-                                    강력한 노이즈 캔슬링과 <br>선명한 사운드, 완벽한 집중의 시작
-                                </p>
-                            </div>
-                            <span class="btn">헤드셋 쇼핑하기</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="page/speakers.html" class="item-link">
-                            <img src="img/hotthing03.png" alt="">
-                            <div class="info-text">
-                                <h3>TSP Balance Wood</h3>
-                                <p class="text">
-                                    공간과 조화를 이루는 사운드,<br> 감각적인 오디오 경험
-                                </p>
-                            </div>
-                            <span class="btn">스피커 쇼핑하기</span>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="page/speakers.html#sp-soundbar" class="item-link">
-                            <img src="img/hotthing04.png" alt="">
-                            <div class="info-text">
-                                <h3>TSP Tower Black</h3>
-                                <p class="text">
-                                    압도적인 출력과 깊이 있는 울림,<br> 공간을 채우는 존재감
-                                </p>
-                            </div>
-                            <span class="btn">사운드바 쇼핑하기</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="sec-experience">
-            <div class="inner">
-                <div class="experience-text">
-                    <h2>Hear Every Detail</h2>
-                    <p class="experience-desc">
-                        단순한 소리가 아닌<br>
-                        공간을 채우는 사운드 경험
-                    </p>
-                    <a href="page/aboutBrand.html" class="experience-btn">브랜드 소개</a>
+      <section id="sec-info">
+        <div class="inner">
+          <h2 class="blind">New items</h2>
+          <ul class="info-list">
+            <li>
+              <a href="page/headsets.html" class="item-link">
+                <img src="img/hotthing01.png" alt="" />
+                <div class="info-text">
+                  <h3>TSP Signature Gold</h3>
+                  <p class="text">
+                    프리미엄 사운드와 세련된 <br />
+                    디자인, 몰입의 기준을 바꾸다
+                  </p>
                 </div>
+                <span class="btn">헤드셋 쇼핑하기</span>
+              </a>
+            </li>
 
-                <div class="experience-video">
-                    <video muted autoplay loop playsinline>
-                        <source src="img/class.mp4" type="video/mp4">
-                    </video>
+            <li>
+              <a href="page/headsets.html" class="item-link">
+                <img src="img/hotthing02.png" alt="" />
+                <div class="info-text">
+                  <h3>TSP Signature Black</h3>
+                  <p class="text">
+                    강력한 노이즈 캔슬링과 <br />선명한 사운드, 완벽한 집중의
+                    시작
+                  </p>
                 </div>
-            </div>
-        </section>
+                <span class="btn">헤드셋 쇼핑하기</span>
+              </a>
+            </li>
 
-        <section id="sec-category">
-            <div class="inner">
-                <h2 class="blind">Category</h2>
+            <li>
+              <a href="page/speakers.html" class="item-link">
+                <img src="img/hotthing03.png" alt="" />
+                <div class="info-text">
+                  <h3>TSP Balance Wood</h3>
+                  <p class="text">
+                    공간과 조화를 이루는 사운드,<br />
+                    감각적인 오디오 경험
+                  </p>
+                </div>
+                <span class="btn">스피커 쇼핑하기</span>
+              </a>
+            </li>
 
-                <ul class="category-list">
-                    <li>
-                        <a href="page/headsets.html">
-                            <img src="img/category01.png" alt="헤드셋">
-                            <strong>Headsets</strong>
-                        </a>
-                    </li>
+            <li>
+              <a href="page/speakers.html#sp-soundbar" class="item-link">
+                <img src="img/hotthing04.png" alt="" />
+                <div class="info-text">
+                  <h3>TSP Tower Black</h3>
+                  <p class="text">
+                    압도적인 출력과 깊이 있는 울림,<br />
+                    공간을 채우는 존재감
+                  </p>
+                </div>
+                <span class="btn">사운드바 쇼핑하기</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-                    <li>
-                        <a href="page/speakers.html#sp-speaker" class="item-link">
-                            <img src="img/category02.png" alt="스피커">
-                            <strong>Speakers</strong>
-                        </a>
-                    </li>
+      <section id="sec-experience">
+        <div class="inner">
+          <div class="experience-text">
+            <h2>Hear Every Detail</h2>
+            <p class="experience-desc">
+              단순한 소리가 아닌<br />
+              공간을 채우는 사운드 경험
+            </p>
+            <a href="page/aboutBrand.html" class="experience-btn"
+              >브랜드 소개</a
+            >
+          </div>
 
-                    <li>
-                        <a href="page/speakers.html#sp-soundbar" class="item-link">
-                            <img src="img/category03.png" alt="사운드바">
-                            <strong>Soundbars</strong>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+          <div class="experience-video">
+            <video muted autoplay loop playsinline>
+              <source src="img/class.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
 
-        <section id="sec-qna">
-            <div class="inner">
-                <h2>궁금한 점이 있으신가요?</h2>
-                <p>
-                    제품 선택부터 사운드 경험까지<br>
-                    자주 묻는 질문을 확인해보세요.
-                </p>
-                <a href="page/qna.html" class="qna-btn">Q&amp;A 바로가기</a>
-            </div>
-        </section>
-        <div id="footer-area"></div>
+      <section id="sec-category">
+        <div class="inner">
+          <h2 class="blind">Category</h2>
+
+          <ul class="category-list">
+            <li>
+              <a href="page/headsets.html">
+                <img src="img/category01.png" alt="헤드셋" />
+                <strong>Headsets</strong>
+              </a>
+            </li>
+
+            <li>
+              <a href="page/speakers.html#sp-speaker" class="item-link">
+                <img src="img/category02.png" alt="스피커" />
+                <strong>Speakers</strong>
+              </a>
+            </li>
+
+            <li>
+              <a href="page/speakers.html#sp-soundbar" class="item-link">
+                <img src="img/category03.png" alt="사운드바" />
+                <strong>Soundbars</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="sec-qna">
+        <div class="inner">
+          <h2>궁금한 점이 있으신가요?</h2>
+          <p>
+            제품 선택부터 사운드 경험까지<br />
+            자주 묻는 질문을 확인해보세요.
+          </p>
+          <a href="page/qna.html" class="qna-btn">Q&amp;A 바로가기</a>
+        </div>
+      </section>
+      <div id="footer-area"></div>
     </div>
 
-<script>
-    $("#menu-area").load("page/menu.html", function () {
+    <script>
+      $("#menu-area").load("page/menu.html", function () {
         initMenu();
-    });
+      });
 
-    $("#footer-area").load("page/footer.html");
-</script>
-</body>
-
+      $("#footer-area").load("page/footer.html");
+    </script>
+  </body>
 </html>
