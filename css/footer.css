@@ -16,17 +16,16 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-#footer .footer-link a {
+#footer .footer-link span {
   position: relative;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.78);
-  text-decoration: none;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-#footer .footer-link a:hover {
+#footer .footer-link span:hover {
   color: var(--color-primary);
 }
 
