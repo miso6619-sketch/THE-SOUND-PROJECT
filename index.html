@@ -23,19 +23,67 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/ngo.js"></script>
-
-    <script>
-      $("#menu-area").load("page/menu.html", function () {
-        initMenu();
-      });
-
-      $("#footer-area").load("page/footer.shtml");
-    </script>
   </head>
 
   <body>
     <div id="wrap">
-      <div id="menu-area"></div>
+      <header id="header">
+        <div class="inner">
+          <div class="menu-top-header">
+            <button
+              type="button"
+              class="menu-btn-mobile menu-open"
+              aria-label="메뉴 열기"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <h1 class="menu-logo">
+              <a href="./index.html">
+                <span class="blind">THE SOUND PROJECT</span>
+              </a>
+            </h1>
+
+            <div class="menu-header-right">
+              <a href="./page/headsets.html" class="btn">
+                <span>시그니처 헤드셋 보기</span>
+              </a>
+            </div>
+
+            <nav class="menu-gnb-area" aria-label="주 메뉴">
+              <div class="menu-gnb-overlay"></div>
+
+              <div class="menu-gnb-panel">
+                <div class="menu-gnb-top">
+                  <button
+                    type="button"
+                    class="menu-btn-close"
+                    aria-label="메뉴 닫기"
+                  >
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+
+                <ul class="menu-gnb">
+                  <li><a href="./index.html">홈</a></li>
+                  <li><a href="./page/headsets.html">헤드셋</a></li>
+                  <li><a href="./page/speakers.html">스피커 &amp; 사운드바</a></li>
+                  <li><a href="./page/aboutBrand.html">브랜드 소개</a></li>
+                  <li><a href="./page/qna.html">Q&amp;A</a></li>
+                </ul>
+
+                <div class="menu-gnb-bottom">
+                  <div class="menu-gnb-sns">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
 
       <section id="main-visual">
         <div class="main-mov">
@@ -78,8 +126,7 @@
                 <div class="info-text">
                   <h3>TSP Signature Black</h3>
                   <p class="text">
-                    강력한 노이즈 캔슬링과 <br />선명한 사운드, 완벽한 집중의
-                    시작
+                    강력한 노이즈 캔슬링과 <br />선명한 사운드, 완벽한 집중의 시작
                   </p>
                 </div>
                 <span class="btn">헤드셋 쇼핑하기</span>
@@ -125,9 +172,7 @@
               단순한 소리가 아닌<br />
               공간을 채우는 사운드 경험
             </p>
-            <a href="page/aboutBrand.html" class="experience-btn"
-              >브랜드 소개</a
-            >
+            <a href="page/aboutBrand.html" class="experience-btn">브랜드 소개</a>
           </div>
 
           <div class="experience-video">
@@ -177,15 +222,15 @@
           <a href="page/qna.html" class="qna-btn">Q&amp;A 바로가기</a>
         </div>
       </section>
+
       <div id="footer-area"></div>
     </div>
 
     <script>
-      $("#menu-area").load("page/menu.html", function () {
+      $(function () {
         initMenu();
+        $("#footer-area").load("page/footer.html");
       });
-
-      $("#footer-area").load("page/footer.html");
     </script>
   </body>
 </html>
