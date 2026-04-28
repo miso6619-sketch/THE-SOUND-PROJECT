@@ -67,7 +67,6 @@
 - jQuery
 - Swiper.js
 - Photoshop
-- Figma
 
 ---
 
