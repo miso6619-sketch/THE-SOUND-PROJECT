@@ -80,4 +80,4 @@
 ---
 
 ## 🔗 사이트 바로가기
-👉 [THE SOUND PROJECT]
+👉 [THE SOUND PROJECT](https://miso6619-sketch.github.io/THE-SOUND-PROJECT/)
