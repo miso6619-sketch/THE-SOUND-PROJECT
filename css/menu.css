@@ -155,7 +155,7 @@
   display: block;
   width: 100%;
   padding: 6px 0;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 1.2;
   color: var(--color-text-dark);
@@ -205,4 +205,134 @@
 #header .btn-donate,
 .mobile-nav {
   display: none;
+}
+
+/* ============================== 1024px ============================== */
+@media screen and (max-width: 1024px) {
+  #header {
+    padding: 20px 0;
+  }
+
+  #header .inner {
+    padding: 0 20px;
+  }
+
+  #header .menu-top-header {
+    height: 64px;
+  }
+
+  #header .menu-logo > a {
+    width: 170px;
+    height: 62px;
+  }
+
+  #header .menu-header-right a {
+    font-size: 14px;
+  }
+
+  #header .menu-gnb-panel {
+    width: 330px;
+  }
+
+  #header .menu-gnb li a {
+    font-size: 27px;
+  }
+}
+
+/* ============================== 768px ============================== */
+@media screen and (max-width: 768px) {
+  #header {
+    padding: 16px 0;
+  }
+
+  #header .inner {
+    padding: 0 18px;
+  }
+
+  #header .menu-top-header {
+    height: 58px;
+  }
+
+  #header .menu-logo > a {
+    width: 150px;
+    height: 54px;
+  }
+
+  #header .menu-btn-mobile i {
+    font-size: 24px;
+  }
+
+  #header .menu-header-right {
+    display: none;
+  }
+
+  #header .menu-gnb-panel {
+    width: 320px;
+    padding: 30px 28px 24px;
+  }
+
+  #header .menu-gnb {
+    gap: 30px;
+  }
+
+  #header .menu-gnb li a {
+    font-size: 25px;
+  }
+}
+
+/* ============================== 430px ============================== */
+@media screen and (max-width: 430px) {
+  #header {
+    padding: 12px 0;
+  }
+
+  #header .inner {
+    padding: 0 16px;
+  }
+
+  #header .menu-top-header {
+    height: 52px;
+  }
+
+  #header .menu-logo > a {
+    width: 130px;
+    height: 48px;
+  }
+
+  #header .menu-btn-mobile i {
+    font-size: 22px;
+  }
+
+  #header .menu-gnb-panel {
+    width: 82%;
+    max-width: 320px;
+    padding: 26px 24px 22px;
+  }
+
+  #header .menu-btn-close i {
+    font-size: 24px;
+  }
+
+  #header .menu-gnb {
+    gap: 26px;
+  }
+
+  #header .menu-gnb li a {
+    font-size: 23px;
+  }
+
+  #header .menu-gnb-bottom {
+    padding-top: 30px;
+    margin-top: 32px;
+  }
+
+  #header .menu-gnb-sns {
+    gap: 18px;
+  }
+
+  #header .menu-gnb-sns a {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
 }

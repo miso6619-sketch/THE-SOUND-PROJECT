@@ -1,5 +1,5 @@
 function initMenu() {
-  console.log("initMenu 실행됨");
+  //console.log("initMenu 실행됨");
 
   $(".menu-open").off("click").on("click", function () {
     //console.log("메뉴 열기 클릭");

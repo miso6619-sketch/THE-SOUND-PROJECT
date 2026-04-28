@@ -140,3 +140,143 @@
 .qna-item:hover .qna-question-text {
   color: var(--color-primary);
 }
+
+/* ============================== 1024px ============================== */
+@media screen and (max-width: 1024px) {
+  #header {
+    height: 100px;
+  }
+
+  #header .inner,
+  .qna-inner {
+    padding: 0 20px;
+  }
+
+  #qna-page {
+    padding-top: 105px;
+  }
+
+  .qna-hero-text {
+    margin: 40px 0;
+  }
+
+  .qna-hero-title {
+    font-size: 46px;
+  }
+
+  .qna-faq {
+    padding: 10px 0 120px;
+  }
+}
+
+/* ============================== 768px ============================== */
+@media screen and (max-width: 768px) {
+  #header {
+    height: 88px;
+  }
+
+  #header .inner,
+  .qna-inner {
+    padding: 0 18px;
+  }
+
+  #qna-page {
+    padding-top: 90px;
+  }
+
+  .qna-hero-text {
+    max-width: 100%;
+    margin: 34px 0;
+  }
+
+  .qna-hero-title {
+    font-size: 38px;
+  }
+
+  .qna-hero-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    word-break: keep-all;
+  }
+
+  .qna-question {
+    padding: 24px 0;
+    gap: 16px;
+  }
+
+  .qna-question-text {
+    font-size: 16px;
+  }
+
+  .qna-answer p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .qna-faq {
+    padding: 10px 0 95px;
+  }
+}
+
+/* ============================== 430px ============================== */
+@media screen and (max-width: 430px) {
+  #header {
+    height: 76px;
+  }
+
+  #header .inner,
+  .qna-inner {
+    padding: 0 16px;
+  }
+
+  #qna-page {
+    padding-top: 78px;
+  }
+
+  .qna-hero-text {
+    margin: 28px 0 32px;
+  }
+
+  .qna-hero-kicker {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .qna-hero-title {
+    font-size: 31px;
+    line-height: 1.1;
+  }
+
+  .qna-hero-desc {
+    font-size: 13px;
+  }
+
+  .qna-question {
+    padding: 22px 0;
+    gap: 14px;
+  }
+
+  .qna-question-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .qna-question-icon {
+    width: 24px;
+    font-size: 24px;
+  }
+
+  .qna-answer {
+    padding: 0 0 24px;
+  }
+
+  .qna-answer p {
+    font-size: 13px;
+    line-height: 1.75;
+    word-break: keep-all;
+  }
+
+  .qna-faq {
+    padding: 8px 0 75px;
+  }
+}
