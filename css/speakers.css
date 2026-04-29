@@ -28,7 +28,6 @@
   justify-content: space-between;
 }
 
-/* 페이지 공통 */
 #sp-page {
   background: var(--color-text);
 }
@@ -52,7 +51,6 @@
   padding: 0 24px;
 }
 
-/* 헤더 텍스트 영역 */
 .sp-head {
   max-width: 340px;
   margin: 0 auto 54px;
@@ -63,7 +61,7 @@
 }
 
 #sp-soundbar .sp-head {
-  margin: 0 auto;
+  margin: 0 auto 54px;
 }
 
 .sp-title {
@@ -101,10 +99,15 @@
   color: rgba(20, 20, 20, 0.72);
 }
 
-/* 공통 swiper */
 .sp-swiper {
   overflow: visible;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 44px;
+}
+
+#sp-speaker .sp-swiper {
+  padding-bottom: 68px;
 }
 
 .sp-swiper .swiper-wrapper {
@@ -145,34 +148,46 @@
   transform: scale(0.72);
 }
 
-/* =========================
-   speaker 영역 헤드셋 느낌으로 보정
-========================= */
+.sp-swiper .swiper-pagination {
+  bottom: 0;
+}
 
-/* 텍스트는 inner 기준으로 유지 */
+#sp-speaker .swiper-pagination {
+  bottom: 10px;
+}
+
+.sp-swiper .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  background: rgba(20, 20, 20, 0.35);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.sp-swiper .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
 #sp-speaker .sp-head,
 #sp-soundbar .sp-head {
   position: relative;
   z-index: 3;
 }
 
-/* swiper만 inner 폭 제한에서 시각적으로 풀어주기 */
 #sp-speaker .sp-swiper,
 #sp-soundbar .sp-swiper {
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
-/* 슬라이드 간격이 너무 모여 보이지 않게 */
 #sp-speaker .sp-slide,
 #sp-soundbar .sp-slide {
   width: 240px;
 }
 
-/* speaker 이미지가 좀 더 시원하게 보이도록 */
 #sp-speaker .sp-slide img {
   max-width: 190px;
 }
@@ -181,7 +196,6 @@
   max-width: 300px;
 }
 
-/* soundbar는 가로형이라 별도 폭 */
 #sp-soundbar .sp-slide {
   width: 340px;
 }
@@ -194,7 +208,6 @@
   max-width: 420px;
 }
 
-/* 양옆 흐린 이미지가 조금 더 보이게 */
 #sp-speaker .swiper-slide-prev,
 #sp-speaker .swiper-slide-next,
 #sp-soundbar .swiper-slide-prev,
@@ -203,13 +216,11 @@
   transform: scale(0.74);
 }
 
-/* 너무 끝으로 잘리지 않게 섹션 자체는 hidden 유지 */
 #sp-speaker,
 #sp-soundbar {
   overflow: hidden;
 }
 
-/* ============================== 1024px ============================== */
 @media screen and (max-width: 1024px) {
   #header {
     height: 100px;
@@ -229,6 +240,10 @@
   }
 
   .sp-head {
+    margin-bottom: 46px;
+  }
+
+  #sp-soundbar .sp-head {
     margin-bottom: 46px;
   }
 
@@ -253,7 +268,6 @@
   }
 }
 
-/* ============================== 768px ============================== */
 @media screen and (max-width: 768px) {
   #header {
     height: 88px;
@@ -274,6 +288,10 @@
 
   .sp-head {
     max-width: 320px;
+    margin-bottom: 40px;
+  }
+
+  #sp-soundbar .sp-head {
     margin-bottom: 40px;
   }
 
@@ -319,7 +337,6 @@
   }
 }
 
-/* ============================== 430px ============================== */
 @media screen and (max-width: 430px) {
   #header {
     height: 76px;
@@ -367,6 +384,18 @@
     padding: 6px 11px;
   }
 
+  .sp-swiper {
+    padding-bottom: 38px;
+  }
+
+  #sp-speaker .sp-swiper {
+    padding-bottom: 62px;
+  }
+
+  #sp-speaker .swiper-pagination {
+    bottom: 8px;
+  }
+
   .sp-swiper .swiper-slide {
     transform: scale(0.72);
   }
@@ -398,5 +427,14 @@
 
   #sp-soundbar .swiper-slide-active img {
     max-width: 270px;
+  }
+
+  .sp-swiper .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+
+  .sp-swiper .swiper-pagination-bullet-active {
+    width: 18px;
   }
 }

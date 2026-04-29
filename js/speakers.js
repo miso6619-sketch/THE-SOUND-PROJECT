@@ -6,25 +6,12 @@ const soundbarName = document.getElementById("soundbarName");
 const soundbarDesc = document.getElementById("soundbarDesc");
 const soundbarPrice = document.getElementById("soundbarPrice");
 
-const speakerSlides = document.querySelectorAll("#sp-speaker .swiper-slide");
-const soundbarSlides = document.querySelectorAll("#sp-soundbar .swiper-slide");
-
-function updateSpeakerInfoByIndex(index) {
-  const slideEl = speakerSlides[index];
+function updateProductInfo(slideEl, nameEl, descEl, priceEl) {
   if (!slideEl) return;
 
-  speakerName.textContent = slideEl.dataset.name;
-  speakerDesc.textContent = slideEl.dataset.desc;
-  speakerPrice.textContent = slideEl.dataset.price;
-}
-
-function updateSoundbarInfoByIndex(index) {
-  const slideEl = soundbarSlides[index];
-  if (!slideEl) return;
-
-  soundbarName.textContent = slideEl.dataset.name;
-  soundbarDesc.textContent = slideEl.dataset.desc;
-  soundbarPrice.textContent = slideEl.dataset.price;
+  nameEl.textContent = slideEl.dataset.name;
+  descEl.textContent = slideEl.dataset.desc;
+  priceEl.textContent = slideEl.dataset.price;
 }
 
 const speakerSwiper = new Swiper(".speakerSwiper", {
@@ -34,6 +21,12 @@ const speakerSwiper = new Swiper(".speakerSwiper", {
   loop: false,
   speed: 700,
   initialSlide: 3,
+
+  pagination: {
+    el: ".speaker-pagination",
+    clickable: true,
+  },
+
   breakpoints: {
     431: {
       slidesPerView: 2.4,
@@ -44,18 +37,44 @@ const speakerSwiper = new Swiper(".speakerSwiper", {
       spaceBetween: 10,
     },
     1024: {
-      slidesPerView: 6.2,
+      slidesPerView: 5.2,
       spaceBetween: 10,
-    }
+    },
   },
+
   on: {
     init: function () {
-      updateSpeakerInfoByIndex(this.activeIndex);
+      updateProductInfo(
+        this.slides[this.activeIndex],
+        speakerName,
+        speakerDesc,
+        speakerPrice
+      );
     },
+
     slideChange: function () {
-      updateSpeakerInfoByIndex(this.activeIndex);
-    }
-  }
+      updateProductInfo(
+        this.slides[this.activeIndex],
+        speakerName,
+        speakerDesc,
+        speakerPrice
+      );
+    },
+
+    click: function () {
+      if (!this.clickedSlide) return;
+
+      const realIndex = Number(this.clickedSlide.dataset.swiperSlideIndex);
+      this.slideTo(realIndex);
+
+      updateProductInfo(
+        this.clickedSlide,
+        speakerName,
+        speakerDesc,
+        speakerPrice
+      );
+    },
+  },
 });
 
 const soundbarSwiper = new Swiper(".soundbarSwiper", {
@@ -65,6 +84,12 @@ const soundbarSwiper = new Swiper(".soundbarSwiper", {
   loop: false,
   speed: 700,
   initialSlide: 3,
+
+  pagination: {
+    el: ".soundbar-pagination",
+    clickable: true,
+  },
+
   breakpoints: {
     431: {
       slidesPerView: 2.4,
@@ -75,30 +100,42 @@ const soundbarSwiper = new Swiper(".soundbarSwiper", {
       spaceBetween: 10,
     },
     1024: {
-      slidesPerView: 6.2,
+      slidesPerView: 5.2,
       spaceBetween: 10,
-    }
+    },
   },
+
   on: {
     init: function () {
-      updateSoundbarInfoByIndex(this.activeIndex);
+      updateProductInfo(
+        this.slides[this.activeIndex],
+        soundbarName,
+        soundbarDesc,
+        soundbarPrice
+      );
     },
+
     slideChange: function () {
-      updateSoundbarInfoByIndex(this.activeIndex);
-    }
-  }
-});
+      updateProductInfo(
+        this.slides[this.activeIndex],
+        soundbarName,
+        soundbarDesc,
+        soundbarPrice
+      );
+    },
 
-speakerSlides.forEach((slide, index) => {
-  slide.addEventListener("click", function () {
-    speakerSwiper.slideTo(index);
-    updateSpeakerInfoByIndex(index);
-  });
-});
+    click: function () {
+      if (!this.clickedSlide) return;
 
-soundbarSlides.forEach((slide, index) => {
-  slide.addEventListener("click", function () {
-    soundbarSwiper.slideTo(index);
-    updateSoundbarInfoByIndex(index);
-  });
+      const realIndex = Number(this.clickedSlide.dataset.swiperSlideIndex);
+      this.slideTo(realIndex);
+
+      updateProductInfo(
+        this.clickedSlide,
+        soundbarName,
+        soundbarDesc,
+        soundbarPrice
+      );
+    },
+  },
 });
